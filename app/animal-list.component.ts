@@ -4,7 +4,13 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'animal-list',
   template: `
-    <div *ngFor="let currentAnimal of childAnimalList">
+    <select (change)="onChange($event.target.value)">
+      <option value="allAnimals" selected="selected">All Animals</option>
+      <option value="youngAnimals">Young (0-2)</option>
+      <option value="matureAnimals">Mature (2+)</option>
+    </select>
+
+    <div *ngFor="let currentAnimal of childAnimalList | age:filterByAge">
       <h2>{{currentAnimal.name}}</h2><br>
       <h4>Age: {{currentAnimal.age}}</h4>
       <h4>Sex: {{currentAnimal.sex}}</h4>
@@ -53,9 +59,9 @@ export class AnimalListComponent {
   //   }
   // }
   //
-  // onChange(optionFromMenu) {
-  //   this.filterByLevel = optionFromMenu;
-  // }
-  //
-  // filterByLevel: string = "fullKegs";
+  onChange(optionFromMenu) {
+    this.filterByAge = optionFromMenu;
+  }
+
+  filterByAge: string = "allAnimals";
 }
