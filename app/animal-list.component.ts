@@ -35,30 +35,6 @@ export class AnimalListComponent {
     this.clickSender.emit(animalToEdit);
   }
 
-  // priorityColor(currentBrew){
-  //   if (currentBrew.abv <= 3){
-  //     return "text-info";
-  //   } else if (currentBrew.abv > 3 && currentBrew.abv <= 7) {
-  //     return  "text-warning";
-  //   } else {
-  //     return "text-danger";
-  //   }
-  // }
-  //
-  // progressBarColor(currentBrew){
-  //   console.log("OnTest" + currentBrew.pints)
-  //   if (currentBrew.pints <= 10){
-  //     console.log("1: " + currentBrew.pints);
-  //     return "progress-bar bg-danger";
-  //   } else if (currentBrew.pints > 10 && currentBrew.pints <= 62) {
-  //     console.log("2: " + currentBrew.pints);
-  //     return  "progress-bar bg-warning";
-  //   } else if (currentBrew.pints > 62) {
-  //     console.log("3: " + currentBrew.pints);
-  //     return "progress-bar bg-success";
-  //   }
-  // }
-  //
   onChange(optionFromMenu) {
     this.filterByAge = optionFromMenu;
   }

@@ -4,11 +4,11 @@
 
 #### By _Riki Montgomery_
 
-## Description
+### Description
 
 _An animal tracking software application to allow zoo workers to track animals, record details about them, and assign caretakers to them._
 
-## User Stories
+### User Stories
 
 * Extend the functionality of the app by building out the animal model to further enhance the app.
 
@@ -24,7 +24,7 @@ _An animal tracking software application to allow zoo workers to track animals, 
 
 * Show animals based on diet type. Then, show all animals who eat meat (carnivores AND omnivores)
 
-## Further Exploration
+### Further Exploration
 
 * Extend the functionality of the app by building out the animal model to further enhance the app.
 
@@ -40,7 +40,7 @@ _An animal tracking software application to allow zoo workers to track animals, 
 
 * Show animals based on diet type. Then, show all animals who eat meat (carnivores AND omnivores)
 
-## Technologies Used
+### Technologies Used
 
 * JavaScript
 * Angular
@@ -50,7 +50,7 @@ _An animal tracking software application to allow zoo workers to track animals, 
 * CSS
 * Bootstrap
 
-## Setup/Installation Requirements
+### Setup/Installation Requirements
 
 1. _`$ git clone` [https://github.com/mostriki/portland-zoo](https://github.com/mostriki/portland-zoo)_
 
@@ -64,7 +64,7 @@ _An animal tracking software application to allow zoo workers to track animals, 
 
 1. _`$ gulp serve` or `$ gulp start`_
 
-## Support and contact details
+### Support and contact details
 
 _If you have any updates or suggestions please contact [Riki Montgomery] (mostriki820@gmail.com) or make a contribution to my repository._
 

@@ -6,10 +6,7 @@ import {Animal} from './animal.model';
   pure: false
 })
 
-
 export class AgePipe implements PipeTransform {
-
-
   transform(input: Animal[], age) {
     let output: Animal[] = [];
     if(age === "youngAnimals") {
