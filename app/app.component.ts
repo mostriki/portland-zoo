@@ -23,8 +23,7 @@ export class AppComponent {
   selectedAnimal = null;
 
   masterAnimalList: Animal[] = [
-    new Animal('Tilly', 7, 'Female', 'River Otter', 'North America', 'Fish, mollusks, frogs, crayfish, turtles, insects and sometimes birds or small mammals.', 'Toy buckets, frozen seafood, and playing peekaboo.', 'Loud noises, crowds, and snakes.', 'Veronica Messinger', 2),
-    new Animal('Tongass', 14, 'Male', 'Harbor seal', 'North America', 'Fish, shellfish and crustaceans.', 'Rubber balls, belly rubs, and toy horns.', 'Other seals.', 'Ben Rose', 3),
+    new Animal('Tilly', 7, 'Female', 'North American River Otter', 'Fish, mollusks, frogs, crayfish, turtles, insects and birds or small mammals.', 'Peekaboo.', 'Loud noises', 'Portland Zoo', 'Veronica Messinger', 2),
   ];
 
   addAnimal(newAnimalFromChild: Animal) {

@@ -15,10 +15,10 @@ import { Animal } from './animal.model';
       <h4>Age: {{currentAnimal.age}}</h4>
       <h4>Sex: {{currentAnimal.sex}}</h4>
       <h4>Species: {{currentAnimal.species}}</h4>
-      <h4>From: {{currentAnimal.origin}}</h4>
       <h4>Diet: {{currentAnimal.diet}}</h4>
       <h4>Likes: {{currentAnimal.likes}}</h4>
       <h4>Dislikes: {{currentAnimal.dislikes}}</h4>
+      <h4>Zoo: {{currentAnimal.location}}</h4>
       <h4>Primary Caretaker: {{currentAnimal.caretaker}}</h4>
       <h4>Team Members: {{currentAnimal.team}}</h4>
       <br>

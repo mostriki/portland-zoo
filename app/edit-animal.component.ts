@@ -16,14 +16,14 @@ import { Animal } from './animal.model';
         <input [(ngModel)]="childSelectedAnimal.sex">
         <label>Species:</label>
         <input [(ngModel)]="childSelectedAnimal.species">
-        <label>Origin:</label>
-        <input [(ngModel)]="childSelectedAnimal.origin">
         <label>Diet:</label>
         <input [(ngModel)]="childSelectedAnimal.diet">
         <label>Likes:</label>
         <input [(ngModel)]="childSelectedAnimal.likes">
         <label>Disikes:</label>
         <input [(ngModel)]="childSelectedAnimal.dislikes">
+        <label>Zoo:</label>
+        <input [(ngModel)]="childSelectedAnimal.location">
         <label>Caretaker:</label>
         <input [(ngModel)]="childSelectedAnimal.caretaker">
         <label>Team:</label>
