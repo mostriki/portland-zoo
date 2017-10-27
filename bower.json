@@ -1,0 +1,17 @@
+{
+  "name": "portland-zoo",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/mostriki/typescript-to-do",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-beta"
+  }
+}
