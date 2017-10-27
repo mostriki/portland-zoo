@@ -10,6 +10,7 @@ import { Animal } from './animal.model';
     </div>
     <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
     <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()" (deleteButtonClickedSender)="deleteAnimal()"></edit-animal>
+    <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
   </div>
   `
 })
@@ -26,20 +27,20 @@ export class AppComponent {
     new Animal('Tongass', 14, 'Male', 'Harbor seal', 'North America', 'Fish, shellfish and crustaceans.', 'Rubber balls, belly rubs, and toy horns.', 'Other seals.', 'Ben Rose', 3),
   ];
 
+  addAnimal(newAnimalFromChild: Animal) {
+    this.masterAnimalList.push(newAnimalFromChild);
+  }
+
   editAnimal(clickedAnimal) {
     this.selectedAnimal = clickedAnimal;
   }
 
-  finishedEditing() {
-    this.selectedAnimal = null;
-  }
-  //
-  // addBrew(newBrewFromChild: Brew) {
-  //   this.masterBrewList.push(newBrewFromChild);
-  // }
-  //
   deleteAnimal() {
     let index = this.masterAnimalList.indexOf(this.selectedAnimal);
     this.masterAnimalList.splice(index, 1);
+  }
+
+  finishedEditing() {
+    this.selectedAnimal = null;
   }
 }
