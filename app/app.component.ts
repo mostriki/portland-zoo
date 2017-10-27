@@ -9,6 +9,7 @@ import { Animal } from './animal.model';
       <h1>Animal List</h1>
     </div>
     <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
+    <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()" (deleteButtonClickedSender)="deleteAnimal()"></edit-animal>
   </div>
   `
 })
@@ -21,30 +22,24 @@ export class AppComponent {
   selectedAnimal = null;
 
   masterAnimalList: Animal[] = [
-    new Animal('Tilly', 7, 'Female', 'River Otter', 'North America', 'Fish, mollusks, frogs, crayfish, turtles, insects and sometimes birds or small mammals.', 'Toy buckets, frozen seafood, and playing peekaboo.', 'Loud noises, crowds, and snakes.', 'Veronica Messinger', 'Dr. Stich, DVM', 2),
-    new Animal('Tongass', 14, 'Male', 'Harbor seal', 'North America', 'Fish, shellfish and crustaceans.', 'Rubber balls, belly rubs, and toy horns.', 'Other seals.', 'Ben Rose', 'Dr. Jimenez, DVM', 3),
-    new Animal('Woody', 1, 'Male', 'Wood duck', 'North America', 'Seeds, aquatic and terrestrial invertebrates.', 'Multigrain bread and lots of sleep.', 'Hawks.', 'Noah Berry', 'Dr. Stich, DVM', 1),
+    new Animal('Tilly', 7, 'Female', 'River Otter', 'North America', 'Fish, mollusks, frogs, crayfish, turtles, insects and sometimes birds or small mammals.', 'Toy buckets, frozen seafood, and playing peekaboo.', 'Loud noises, crowds, and snakes.', 'Veronica Messinger', 2),
+    new Animal('Tongass', 14, 'Male', 'Harbor seal', 'North America', 'Fish, shellfish and crustaceans.', 'Rubber balls, belly rubs, and toy horns.', 'Other seals.', 'Ben Rose', 3),
   ];
 
-  // editBrew(clickedBrew) {
-  //   this.selectedBrew = clickedBrew;
-  // }
-  //
-  // finishedEditing() {
-  //   this.selectedBrew = null;
-  // }
+  editAnimal(clickedAnimal) {
+    this.selectedAnimal = clickedAnimal;
+  }
+
+  finishedEditing() {
+    this.selectedAnimal = null;
+  }
   //
   // addBrew(newBrewFromChild: Brew) {
   //   this.masterBrewList.push(newBrewFromChild);
   // }
   //
-  // deleteBrew() {
-  //   let index = this.masterBrewList.indexOf(this.selectedBrew);
-  //   this.masterBrewList.splice(index, 1);
-  // }
-  //
-  // refillKeg() {
-  //   let index = this.masterBrewList.indexOf(this.selectedBrew);
-  //   this.masterBrewList[index].pints = 124;
-  // }
+  deleteAnimal() {
+    let index = this.masterAnimalList.indexOf(this.selectedAnimal);
+    this.masterAnimalList.splice(index, 1);
+  }
 }
